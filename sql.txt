@@ -1,0 +1,1 @@
+SELECT e.emp_id, e.emp_name, e.salary, s.grade, d.dep_name, age(CURRENT_DATE, hire_date) AS "Experience", 12 * e.salary "Annual Salary" FROM employees e, department d, salary_grade s WHERE e.dep_id IN (1001, 2001) AND e.dep_id = d.dep_id AND e.salary BETWEEN s.min_sal AND s.max_sal ;
